@@ -11,7 +11,7 @@ const calculateHash = async () => {
     const text = await fsPromises.readFile(myPath, { encoding: 'utf8' });
     const hash = createHash('sha256').update(text).digest('hex');
 
-    console.log(hash)
+    console.log(hash);
 };
 
 await calculateHash();

@@ -22,18 +22,18 @@ const performCalculations = async () => {
                 });
             });
             worker.on('error', () => {
-                resolve({
+                resolve({              //resolve is used rather than reject because we need a list of data with both successful workers and those that gave an error
                     status: 'error',
                     data: null
                 })
-            })
+            });
         })
-        arrWithPromise.push(worker)
+        arrWithPromise.push(worker);
     }
     
     Promise.all(arrWithPromise).then(values => {
         console.log(values);
-    })
+    });
 };
 
 await performCalculations();

@@ -16,7 +16,7 @@ const rename = async () => {
         throw new Error('FS operation failed: wrong file not exists or proper file already exists');
     }
 
-    await fsPromises.rename(pathWrongFile, pathProperFile)
+    await fsPromises.rename(pathWrongFile, pathProperFile);
 };
 
 await rename();

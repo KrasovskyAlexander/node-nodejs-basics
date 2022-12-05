@@ -14,7 +14,7 @@ const copy = async () => {
         throw new Error('FS operation failed: files dir not exists or copy dir already exists');
     }
 
-    await fsPromises.cp(myPath, myPathCopy, { recursive: true });
+    await fsPromises.cp(myPath, myPathCopy, { recursive: true });  // if this method little confuse you, please check screenshot on PR
 };
 
 copy();
